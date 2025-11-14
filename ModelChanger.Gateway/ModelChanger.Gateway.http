@@ -1,0 +1,6 @@
+@ModelChanger.Gateway_HostAddress = http://localhost:5195
+
+GET {{ModelChanger.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
