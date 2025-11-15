@@ -32,7 +32,11 @@ pipeline {
         stage('Docker Build Image') {
             steps {
                 script {
-                    sh """docker build -t "$REGISTRY:$DOCKER_TAG" ."""
+                    sh """
+                        docker build -t "$REGISTRY:$DOCKER_TAG" \
+                            -f ModelChanger.Gateway/Dockerfile \
+                            ModelChanger
+                    """
                 }
             }
         }
