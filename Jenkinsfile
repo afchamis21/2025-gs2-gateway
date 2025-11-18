@@ -35,7 +35,7 @@ pipeline {
                     sh """
                         docker build -t "$REGISTRY:$DOCKER_TAG" \
                             -f ModelChanger.Gateway/Dockerfile \
-                            ModelChanger
+                            ModelChanger.Gateway
                     """
                 }
             }
